@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop-Watch App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        <p class="time">
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span>
+        </p>
+        <button id="stopBtn">Stop</button>
+        <button id="startBtn">Start</button>
+        <button id="lapBtn">Lap</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <div class="lap-container">
+        <ul id="laps">
+            <!-- <li>12</li> -->
+        </ul>
+    </div>
+</body>
+
+<script>
+    window.onload = function(){
+        let minutes = 0;
+        let seconds = 0;
+        let tens = 0;
+
+        let startBtn = document.getElementById('startBtn')
+        let stopBtn = document.getElementById('stopBtn')
+        let resetBtn = document.getElementById('resetBtn')
+        let lapBtn = document.getElementById('lapBtn')
+
+        let appendMinutes = document.getElementById('minutes')
+        let appendSeconds = document.getElementById('seconds')
+        let appendTens = document.getElementById('tens')
+
+        let Interval;
+
+        document.querySelector('#startBtn').style.display = "inline-block";
+        document.querySelector('#lapBtn').style.display = "none";
+
+        const startTimer = () => {
+            document.querySelector('#startBtn').style.display = "none";
+            document.querySelector('#lapBtn').style.display = "inline-block";
+            tens++;
+            if (tens <= 9) {
+                appendTens.innerHTML = '0' + tens;
+            }
+            
+            if(tens > 9){
+                appendTens.innerHTML = tens;
+            }
+
+            if(tens > 99){
+                seconds++
+                appendSeconds.innerHTML = '0' + seconds;
+                tens = 0;
+                appendTens.innerHTML = '0' + 0;
+            }
+
+            if(seconds > 9){
+                appendSeconds.innerHTML = seconds;
+            }
+
+            if(seconds > 59){
+                minutes++;
+                appendMinutes.innerHTML = '0' + minutes;
+                seconds = 0;
+                appendSeconds.innerHTML = '0'+ 0;
+            }
+        }
+
+        startBtn.onclick = () => {
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 10);
+        }
+
+        stopBtn.onclick = () => {
+            clearInterval(Interval);
+            document.querySelector('#startBtn').style.display = "inline-block";
+            document.querySelector('#lapBtn').style.display = "none";
+        }
+
+        resetBtn.onclick = () => {
+            clearInterval(Interval);
+            appendMinutes.innerHTML = '00';
+            appendSeconds.innerHTML = '00';
+            appendTens.innerHTML = '00';
+
+            document.querySelector('#startBtn').style.display = "inline-block";
+            document.querySelector('#lapBtn').style.display = "none";
+
+            let laps = document.querySelector('#laps');
+            document.querySelector('.lap-container').style.display = "none";
+
+            while (laps.firstChild) {
+                laps.removeChild(laps.firstChild);
+            }
+        }
+
+        lapBtn.onclick = () => {
+            let timer = document.querySelector('.time').innerText;
+            // console.log(timer);
+            document.querySelector('.lap-container').style.display = "inline-block";
+            let lap1 = document.querySelector('#laps');
+            const node = document.createElement("li");
+            // console.log(lap1)
+            const textnode = document.createTextNode(timer);
+            node.appendChild(textnode);
+            lap1.appendChild(node);
+
+            // lap1.
+        }
+    }
+</script>
+
+</html>

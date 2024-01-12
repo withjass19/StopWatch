@@ -1,0 +1,78 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1698766767195-fdaba9166ab9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+.container{
+    width: 400px;
+    height: 250px;
+    background-color: rgba(0,0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    /* position: relative; */
+}
+.lap-container{
+    width: 400px;
+    max-height: 250px;
+    background-color: rgba(0,0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1%;
+    display: none;
+    overflow: hidden;
+}
+
+.container h1{
+    font-size: 2.4rem;
+}
+.container .time{
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+ul,
+li{
+    color: #f8f8f8;
+    list-style: none;
+    padding-bottom: 0.5rem;
+}
+
+h1,
+p{
+    color: #f8f8f8;
+}
+
+button{
+    padding: 0.4rem 2rem;
+    margin: 0 0.2rem;
+    border-radius: 10px;
+    border: 1px solid #f8f8f8;
+}
+button:hover{
+    background-color: rgba(0,0, 0, 0.4);
+    color: #f8f8f8;
+}
+
+#startBtn{
+    display: inline-block;
+}
+
+#lapBtn{
+    display: none;
+}
