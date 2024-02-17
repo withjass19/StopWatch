@@ -1,6 +1,6 @@
 # StopWatch
 
-![StopWatch Preview](https://raw.githubusercontent.com/withjass19/StopWatch/main/stopwatch-preview.png)
+![StopWatch Preview](UI.png)
 
 A simple and elegant stopwatch web application built with HTML, CSS, and JavaScript.
 
