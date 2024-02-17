@@ -26,6 +26,7 @@ Check out the live demo [here](https://withjass19.github.io/StopWatch).
 2. Use the buttons to start, stop, or reset the stopwatch.
 
 ##Contributing
+
 Contributions are welcome! If you have any ideas, suggestions, or bug fixes, feel free to open an issue or submit a pull request.
 
 1. Fork the repository.
@@ -35,13 +36,16 @@ Contributions are welcome! If you have any ideas, suggestions, or bug fixes, fee
 5. Open a pull request.
 
 ##License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ##Credits
+
 FontAwesome - for icons.
 Unsplash - for background image.
 
 ##Contact
+
 Feel free to contact me if you have any questions or suggestions:
 
 ###Jaspreet Singh
