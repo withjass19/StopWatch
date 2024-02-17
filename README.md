@@ -50,5 +50,5 @@ Feel free to contact me if you have any questions or suggestions:
 
 ### Jaspreet Singh
 
-Email: jaspreetmehra185@gmail.com
+Email: jaspreetmehra185@gmail.com <br>
 LinkedIn: [Jaspreet Singh](https://www.linkedin.com/in/jaspreet-s-2227a6226/)
